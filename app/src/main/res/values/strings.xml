@@ -1,17 +1,46 @@
 <resources>
     <string name="app_name">Dodolan</string>
+
+    <!--  Cards_info  -->
     <string name="statistik">Statistik Keuangan</string>
     <string name="balance_title">Penghasilan per Bulan</string>
     <string name="profit_title">Untung per Bulan</string>
     <string name="order_title">Penjualan per Bulan</string>
     <string name="debt_title">Hutang per Bulan</string>
+
+
+    <!--  Forms  -->
     <string name="login">Login</string>
     <string name="username_email">Username/Email</string>
     <string name="Password">Password</string>
+
+
+    <!--  card sections & title  -->
+    <string name="balance">Pendapatan</string>
+    <string name="status">Status</string>
+    <string name="profit">Profit</string>
+    <string name="penjualan">Penjualan</string>
+    <string name="hutang">Hutang</string>
+
+
+    <!--  Buttons  -->
+    <string name="register">Register</string>
+    <string name="registerButton">Register</string>
+    <string name="tambah_penjualan">Tambah Penjualan</string>
+
+
+    <!--  Clickable Strings  -->
     <string name="no_acc">Belum memiliki akun?</string>
     <string name="has_acc">Sudah memiliki akun ?</string>
-    <string name="register">Register</string>
 
+
+    <!--  Dummies  -->
+    <string name="dummy_balance">Rp 10.000.000</string>
+
+
+    <!--  Strings  -->
     <string name="nama_menu">Nama Menu</string>
-    <string name="registerButton">Register</string>
+    <string name="bulan_ini">bulan ini</string>
+    <string name="dot">•</string>
+    <string name="list_latest_order">Daftar Penjualan Terakhir</string>
 </resources>
