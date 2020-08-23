@@ -1,116 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:layout_margin="16dp">
+<androidx.cardview.widget.CardView style="@style/each_card"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout style="@style/section_container">
 
-        <LinearLayout
-            android:id="@+id/card_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/profit"
+            style="@style/section"
+            android:text="@string/profit" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="@string/status"
-                android:textColor="#353535"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:text="@string/dot"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bulan_ini"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/balance_section"
-            style="@style/section_container"
-            app:layout_constraintEnd_toStartOf="@+id/profit_section"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_title">
-
-            <TextView
-                android:id="@+id/balance_title"
-                style="@style/section"
-                android:text="@string/balance" />
-
-            <TextView
-                style="@style/section_value"
-                android:text="@string/dummy_balance" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@id/profit_section"
-            style="@style/section_container"
-            app:layout_constraintBottom_toBottomOf="@id/balance_section"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/balance_section"
-            app:layout_constraintTop_toTopOf="@id/balance_section">
-
-            <TextView
-                android:id="@+id/profit"
-                style="@style/section"
-                android:text="@string/profit" />
-
-            <TextView
-                style="@style/section_value"
-                android:text="@string/dummy_balance" />
-        </LinearLayout>
-
-        <!--  Penghutang  -->
-
-        <LinearLayout
-            android:id="@+id/order_section"
-            style="@style/section_container"
-            app:layout_constraintEnd_toStartOf="@+id/debt_section"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/balance_section">
-
-            <TextView
-                style="@style/section"
-                android:text="@string/penjualan" />
-
-            <TextView
-                style="@style/section_value"
-                android:text="@string/dummy_balance" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/debt_section"
-            style="@style/section_container"
-            app:layout_constraintBottom_toBottomOf="@id/order_section"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/order_section"
-            app:layout_constraintTop_toTopOf="@id/order_section">
-
-            <TextView
-                style="@style/section"
-                android:text="@string/hutang" />
-
-            <TextView
-                style="@style/section_value"
-                android:text="@string/dummy_balance" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</com.google.android.material.card.MaterialCardView>
+        <TextView
+            style="@style/section_value"
+            android:text="@string/dummy_balance" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
