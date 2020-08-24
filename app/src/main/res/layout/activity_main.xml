@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -37,12 +36,8 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:text="@string/status"
-                    android:textColor="#353535"
-                    android:textSize="24sp" />
+                    style="@style/subtitle"
+                    android:text="@string/status" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,19 +56,19 @@
             <include
                 android:id="@+id/balance_section"
                 layout="@layout/custom_info_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 app:layout_constraintBottom_toTopOf="@id/order_section"
                 app:layout_constraintEnd_toStartOf="@+id/profit_section"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_title"
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"/>
+                app:layout_constraintTop_toBottomOf="@id/card_title" />
 
             <include
                 android:id="@id/profit_section"
                 layout="@layout/custom_info_card"
-                android:layout_height="wrap_content"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/balance_section"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,15 +88,26 @@
                 app:layout_constraintTop_toBottomOf="@id/balance_section" />
 
             <include
-                layout="@layout/custom_info_card"
                 android:id="@+id/debt_section"
+                layout="@layout/custom_info_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/order_section"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/order_section"
-                app:layout_constraintTop_toTopOf="@id/order_section"/>
+                app:layout_constraintTop_toTopOf="@id/order_section" />
+
+            <TextView
+                android:id="@+id/title_menu_card"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Actions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/menu_card"
@@ -111,7 +117,9 @@
                 android:layout_marginTop="@dimen/medium_box_spaces"
                 android:layout_marginEnd="@dimen/medium_box_spaces"
                 app:cardCornerRadius="4dp"
-                app:layout_constraintTop_toBottomOf="@id/order_section">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_menu_card">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -119,66 +127,7 @@
                     android:orientation="horizontal"
                     android:padding="16dp">
 
-                    <LinearLayout
-                        android:id="@+id/menu_1"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            app:cardCornerRadius="6dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_dompet"
-                                tools:ignore="ContentDescription" />
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/tambah_penjualan"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            app:cardCornerRadius="6dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_dompet"
-                                tools:ignore="ContentDescription" />
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/tambah_penjualan"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
+                    <include layout="@layout/action_button" />
 
                 </LinearLayout>
 
@@ -214,7 +163,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/medium_margin"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="50dp"
@@ -225,7 +175,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/ic_order" />
+                                android:src="@drawable/ic_order"
+                                tools:ignore="ContentDescription" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -234,7 +185,8 @@
                             android:layout_height="wrap_content"
                             android:text="#ORDER0001"
                             android:textColor="@color/black"
-                            android:textSize="15sp" />
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
 
                     </LinearLayout>
 
