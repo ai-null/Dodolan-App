@@ -16,11 +16,11 @@
 
 
     <!--  card sections & title  -->
-    <string name="balance">Pendapatan</string>
     <string name="status">Status</string>
+    <string name="balance">Pendapatan</string>
     <string name="profit">Profit</string>
-    <string name="penjualan">Penjualan</string>
-    <string name="hutang">Hutang</string>
+    <string name="order">Penjualan</string>
+    <string name="debt">Hutang</string>
 
 
     <!--  Buttons  -->
@@ -43,4 +43,5 @@
     <string name="bulan_ini">bulan ini</string>
     <string name="dot">•</string>
     <string name="list_latest_order">Daftar Penjualan Terakhir</string>
+    <string name="actions">Actions</string>
 </resources>

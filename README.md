@@ -1,4 +1,4 @@
-# Dodolan-App
+G# Dodolan-App
 ![Android CI](https://github.com/ai-null/Dodolan-App/workflows/Android%20CI/badge.svg)
 
 <p>
