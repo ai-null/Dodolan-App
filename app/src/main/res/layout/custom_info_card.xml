@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView style="@style/each_card"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout>
 
-    <LinearLayout style="@style/section_container">
+    <data>
 
-        <TextView
-            android:id="@+id/profit"
-            style="@style/section"
-            android:text="@string/profit" />
+        <variable
+            name="section"
+            type="String" />
 
-        <TextView
-            style="@style/section_value"
-            android:text="@string/dummy_balance" />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+        <variable
+            name="section_value"
+            type="Integer" />
+    </data>
+
+    <androidx.cardview.widget.CardView style="@style/each_card"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout style="@style/section_container">
+
+            <TextView
+                android:id="@+id/profit"
+                style="@style/section"
+                android:text="@{section}"
+                tools:text="@string/profit" />
+
+            <TextView
+                style="@style/section_value"
+                android:text="@{section_value.toString()}"
+                tools:text="@string/dummy_balance"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
