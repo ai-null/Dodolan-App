@@ -43,5 +43,5 @@
     <string name="bulan_ini">bulan ini</string>
     <string name="dot">•</string>
     <string name="list_latest_order">Daftar Penjualan Terakhir</string>
-    <string name="actions">Actions</string>
+    <string name="actions">Quick actions</string>
 </resources>

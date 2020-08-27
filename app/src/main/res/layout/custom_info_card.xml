@@ -20,12 +20,17 @@
 
             <TextView
                 android:id="@+id/profit"
-                style="@style/section"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:text="@{section}"
                 tools:text="@string/profit" />
 
             <TextView
-                style="@style/section_value"
+                android:layout_marginTop="5dp"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:text="@{section_value.toString()}"
                 tools:text="@string/dummy_balance"/>
         </LinearLayout>
