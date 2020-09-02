@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.balanceSection.section = "Balance"
+        binding.balanceSection.sectionValue = 10000
         binding.dataDummy = data
     }
 }
